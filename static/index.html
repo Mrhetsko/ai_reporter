@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Blog Post Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header-controls">
+            <h1>AI Blog Post Generator</h1>
+            <a href="/api/download-posts" id="download-btn" class="button-download hidden" download>
+                Download All as CSV
+            </a>
+        </div>
+
+        <form id="generator-form">
+            <div class="form-group">
+                <label for="topic">Blog Post Topic:</label>
+                <input type="text" id="topic" name="topic" placeholder="e.g., The Future of Renewable Energy" required>
+            </div>
+            <div class="form-group">
+                <label for="style">Writing Style:</label>
+                <select id="style" name="style">
+                    <option value="professional and engaging">Professional</option>
+                    <option value="casual and humorous">Casual & Humorous</option>
+                    <option value="technical and detailed">Technical & Detailed</option>
+                    <option value="simple and for beginners">Simple for Beginners</option>
+                </select>
+            </div>
+            <button type="submit" id="generate-btn">Generate Post</button>
+        </form>
+
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>Generating... This may take a moment.</p>
+        </div>
+
+        <div id="results" class="hidden">
+            <article>
+                <h2 id="result-title"></h2>
+                <p><strong>Slug:</strong> <code id="result-slug"></code></p>
+                <hr>
+                <p><em><strong id="result-description"></strong></em></p>
+                <hr>
+                <h3>Table of Contents</h3>
+                <div id="result-toc"></div>
+                <hr>
+                <h3>Content</h3>
+                <div id="result-content"></div>
+                <hr>
+                <h3>SEO Information</h3>
+                <div class="seo-info">
+                    <p><strong>SEO Title:</strong> <span id="result-seo-title"></span></p>
+                    <p><strong>SEO Description:</strong> <span id="result-seo-description"></span></p>
+                </div>
+                <hr>
+                <h3>Frequently Asked Questions (FAQ)</h3>
+                <div id="result-faq"></div>
+            </article>
+        </div>
+
+        <div id="error" class="hidden"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
