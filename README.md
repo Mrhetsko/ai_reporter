@@ -159,7 +159,6 @@ Navigate to **[http://localhost:8000](http://localhost:8000)**. Fill in the topi
 Navigate to **[http://localhost:8000/docs](http://localhost:8000/docs)** to access the interactive API documentation. You can test all endpoints directly from this interface.
 
 -   Use the `POST /api/generate-blog-post` endpoint to create a new article.
--   Use the `GET /api/download-posts` endpoint to download the CSV file.
 
 #### 3. Via a Direct API Request (e.g., cURL)
 
