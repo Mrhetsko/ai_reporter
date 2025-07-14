@@ -49,7 +49,7 @@ The following image shows a new record being successfully created in an Airtable
 
 1.1 First, clone the project repository to your local machine.
 ```bash
-git clone https://github.com/Mrhetsko/ai_reporter
+git clone https://github.com/Mrhetsko/ai_reporter.git
 ```
 1.2 Navigate into the project directory:
 ```bash
